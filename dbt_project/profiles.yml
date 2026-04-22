@@ -1,0 +1,9 @@
+llm_audit_dbt:
+  outputs:
+    dev:
+      type: duckdb
+      path: "audit_db.duckdb"
+      extensions:
+        - httpfs
+        - parquet
+  target: dev

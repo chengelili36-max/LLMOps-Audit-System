@@ -1,0 +1,1201 @@
+[0m16:29:33.906432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104244980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079879d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107987c50>]}
+
+
+============================== 16:29:33.909515 | 211b68f2-571c-4c15-9db8-4c7c5409e36f ==============================
+[0m16:29:33.909515 [info ] [MainThread]: Running with dbt=1.11.8
+[0m16:29:33.909873 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'log_path': '/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/logs', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'target_path': 'None', 'fail_fast': 'False', 'profiles_dir': '.', 'partial_parse': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'quiet': 'False', 'printer_width': '80', 'empty': 'None', 'log_cache_events': 'False', 'invocation_command': 'dbt debug --profiles-dir .', 'static_parser': 'True', 'warn_error': 'None', 'introspect': 'True'}
+[0m16:29:33.919847 [info ] [MainThread]: dbt version: 1.11.8
+[0m16:29:33.920102 [info ] [MainThread]: python version: 3.13.2
+[0m16:29:33.920237 [info ] [MainThread]: python path: /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/bin/python3.13
+[0m16:29:33.920358 [info ] [MainThread]: os info: macOS-15.7.4-arm64-arm-64bit-Mach-O
+[0m16:29:34.035753 [info ] [MainThread]: Using profiles dir at .
+[0m16:29:34.036088 [info ] [MainThread]: Using profiles.yml file at ./profiles.yml
+[0m16:29:34.036239 [info ] [MainThread]: Using dbt_project.yml file at /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/dbt_project.yml
+[0m16:29:34.037563 [info ] [MainThread]: adapter type: duckdb
+[0m16:29:34.037714 [info ] [MainThread]: adapter version: 1.10.1
+[0m16:29:34.090610 [info ] [MainThread]: Configuration:
+[0m16:29:34.090895 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:29:34.091040 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:29:34.091167 [info ] [MainThread]: Required dependencies:
+[0m16:29:34.091371 [debug] [MainThread]: Executing "git --help"
+[0m16:29:34.114368 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:29:34.114954 [debug] [MainThread]: STDERR: "b''"
+[0m16:29:34.115124 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:29:34.115274 [info ] [MainThread]: Connection:
+[0m16:29:34.115434 [info ] [MainThread]:   database: dev
+[0m16:29:34.115550 [info ] [MainThread]:   schema: main
+[0m16:29:34.115661 [info ] [MainThread]:   path: dev.duckdb
+[0m16:29:34.115767 [info ] [MainThread]:   config_options: None
+[0m16:29:34.115869 [info ] [MainThread]:   extensions: None
+[0m16:29:34.115979 [info ] [MainThread]:   settings: {}
+[0m16:29:34.116083 [info ] [MainThread]:   external_root: .
+[0m16:29:34.116184 [info ] [MainThread]:   use_credential_provider: None
+[0m16:29:34.116293 [info ] [MainThread]:   attach: None
+[0m16:29:34.116393 [info ] [MainThread]:   filesystems: None
+[0m16:29:34.116498 [info ] [MainThread]:   remote: None
+[0m16:29:34.116599 [info ] [MainThread]:   plugins: None
+[0m16:29:34.116701 [info ] [MainThread]:   disable_transactions: False
+[0m16:29:34.117029 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:29:34.170256 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m16:29:34.195121 [debug] [MainThread]: Using duckdb connection "debug"
+[0m16:29:34.195375 [debug] [MainThread]: On debug: select 1 as id
+[0m16:29:34.195512 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:29:34.208975 [debug] [MainThread]: SQL status: OK in 0.013 seconds
+[0m16:29:34.209592 [debug] [MainThread]: On debug: Close
+[0m16:29:34.209804 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:29:34.209970 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:29:34.212023 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.34563157, "process_in_blocks": "0", "process_kernel_time": 0.214487, "process_mem_max_rss": "142606336", "process_out_blocks": "0", "process_user_time": 0.879923}
+[0m16:29:34.212297 [debug] [MainThread]: Command `dbt debug` succeeded at 16:29:34.212242 after 0.35 seconds
+[0m16:29:34.212454 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:29:34.212639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f5da70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ef1130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a7a470>]}
+[0m16:29:34.213092 [debug] [MainThread]: Flushing usage events
+[0m16:29:34.632203 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:30:44.661283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111708980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d87c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d87b10>]}
+
+
+============================== 16:30:44.664445 | d13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c ==============================
+[0m16:30:44.664445 [info ] [MainThread]: Running with dbt=1.11.8
+[0m16:30:44.664812 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run --profiles-dir .', 'warn_error': 'None', 'log_cache_events': 'False', 'log_path': '/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/logs', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'version_check': 'True', 'empty': 'False', 'target_path': 'None', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'quiet': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'static_parser': 'True'}
+[0m16:30:44.843882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111cc4fc0>]}
+[0m16:30:44.875722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113811f20>]}
+[0m16:30:44.877306 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:30:44.936338 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m16:30:44.936884 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:30:44.937085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ee2050>]}
+[0m16:30:45.576706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1115ef200>]}
+[0m16:30:45.617234 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/manifest.json
+[0m16:30:45.618548 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/semantic_manifest.json
+[0m16:30:45.625129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1140b6eb0>]}
+[0m16:30:45.625375 [info ] [MainThread]: Found 3 models, 4 data tests, 475 macros
+[0m16:30:45.625547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113e5ab60>]}
+[0m16:30:45.626430 [info ] [MainThread]: 
+[0m16:30:45.626601 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:30:45.626731 [info ] [MainThread]: 
+[0m16:30:45.626961 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:30:45.629293 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m16:30:45.660026 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m16:30:45.660285 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m16:30:45.660425 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:30:45.675554 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m16:30:45.676419 [debug] [ThreadPool]: On list_dev: Close
+[0m16:30:45.676797 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m16:30:45.677020 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m16:30:45.680369 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m16:30:45.680537 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m16:30:45.680668 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:30:45.681318 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:30:45.681928 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m16:30:45.682052 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m16:30:45.682253 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:30:45.682370 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m16:30:45.682487 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m16:30:45.682709 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:30:45.683090 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m16:30:45.683223 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m16:30:45.683340 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m16:30:45.683531 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:30:45.683658 [debug] [ThreadPool]: On create_dev_main: Close
+[0m16:30:45.684205 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m16:30:45.686684 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m16:30:45.686831 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m16:30:45.687268 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:30:45.687540 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:30:45.687667 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m16:30:45.687794 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m16:30:45.690718 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m16:30:45.691452 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m16:30:45.692380 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m16:30:45.692559 [debug] [ThreadPool]: On list_dev_main: Close
+[0m16:30:45.692868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1140ea690>]}
+[0m16:30:45.693155 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:30:45.693297 [debug] [MainThread]: On master: BEGIN
+[0m16:30:45.693488 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:30:45.693825 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:30:45.694012 [debug] [MainThread]: On master: COMMIT
+[0m16:30:45.694147 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:30:45.694271 [debug] [MainThread]: On master: COMMIT
+[0m16:30:45.694540 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:30:45.694688 [debug] [MainThread]: On master: Close
+[0m16:30:45.696481 [debug] [Thread-1 (]: Began running node model.llm_audit_dbt.my_first_dbt_model
+[0m16:30:45.696761 [info ] [Thread-1 (]: 1 of 2 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m16:30:45.697008 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.llm_audit_dbt.my_first_dbt_model)
+[0m16:30:45.697173 [debug] [Thread-1 (]: Began compiling node model.llm_audit_dbt.my_first_dbt_model
+[0m16:30:45.700960 [debug] [Thread-1 (]: Writing injected SQL for node "model.llm_audit_dbt.my_first_dbt_model"
+[0m16:30:45.701598 [debug] [Thread-1 (]: Began executing node model.llm_audit_dbt.my_first_dbt_model
+[0m16:30:45.718114 [debug] [Thread-1 (]: Writing runtime sql for node "model.llm_audit_dbt.my_first_dbt_model"
+[0m16:30:45.718936 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_first_dbt_model"
+[0m16:30:45.719117 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_first_dbt_model: BEGIN
+[0m16:30:45.719272 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:30:45.719659 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:30:45.719809 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_first_dbt_model"
+[0m16:30:45.719967 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m16:30:45.723109 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m16:30:45.726228 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_first_dbt_model"
+[0m16:30:45.726411 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m16:30:45.726998 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:30:45.734712 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_first_dbt_model: COMMIT
+[0m16:30:45.734944 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_first_dbt_model"
+[0m16:30:45.735101 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_first_dbt_model: COMMIT
+[0m16:30:45.736410 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:30:45.739226 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_first_dbt_model"
+[0m16:30:45.739417 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.my_first_dbt_model"} */
+
+      drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m16:30:45.739768 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:30:45.740965 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_first_dbt_model: Close
+[0m16:30:45.741950 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1145ada70>]}
+[0m16:30:45.742271 [info ] [Thread-1 (]: 1 of 2 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.04s]
+[0m16:30:45.742555 [debug] [Thread-1 (]: Finished running node model.llm_audit_dbt.my_first_dbt_model
+[0m16:30:45.742983 [debug] [Thread-1 (]: Began running node model.llm_audit_dbt.my_second_dbt_model
+[0m16:30:45.743275 [info ] [Thread-1 (]: 2 of 2 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m16:30:45.743528 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.llm_audit_dbt.my_first_dbt_model, now model.llm_audit_dbt.my_second_dbt_model)
+[0m16:30:45.743711 [debug] [Thread-1 (]: Began compiling node model.llm_audit_dbt.my_second_dbt_model
+[0m16:30:45.744962 [debug] [Thread-1 (]: Writing injected SQL for node "model.llm_audit_dbt.my_second_dbt_model"
+[0m16:30:45.745441 [debug] [Thread-1 (]: Began executing node model.llm_audit_dbt.my_second_dbt_model
+[0m16:30:45.754380 [debug] [Thread-1 (]: Writing runtime sql for node "model.llm_audit_dbt.my_second_dbt_model"
+[0m16:30:45.754951 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_second_dbt_model"
+[0m16:30:45.755125 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_second_dbt_model: BEGIN
+[0m16:30:45.755281 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:30:45.755662 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:30:45.755816 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_second_dbt_model"
+[0m16:30:45.755970 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m16:30:45.756460 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:30:45.758008 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_second_dbt_model"
+[0m16:30:45.758250 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m16:30:45.758819 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:30:45.759540 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_second_dbt_model: COMMIT
+[0m16:30:45.759713 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_second_dbt_model"
+[0m16:30:45.759862 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_second_dbt_model: COMMIT
+[0m16:30:45.760361 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:30:45.763071 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.my_second_dbt_model"
+[0m16:30:45.763257 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.my_second_dbt_model"} */
+
+      drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m16:30:45.763585 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:30:45.764252 [debug] [Thread-1 (]: On model.llm_audit_dbt.my_second_dbt_model: Close
+[0m16:30:45.764520 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd13c54d6-a2cc-40b1-b8bf-2a479c5e4a5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114757bb0>]}
+[0m16:30:45.764831 [info ] [Thread-1 (]: 2 of 2 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.02s]
+[0m16:30:45.765090 [debug] [Thread-1 (]: Finished running node model.llm_audit_dbt.my_second_dbt_model
+[0m16:30:45.765629 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:30:45.765778 [debug] [MainThread]: On master: BEGIN
+[0m16:30:45.765902 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:30:45.766153 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:30:45.766277 [debug] [MainThread]: On master: COMMIT
+[0m16:30:45.766395 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:30:45.766514 [debug] [MainThread]: On master: COMMIT
+[0m16:30:45.766731 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:30:45.766898 [debug] [MainThread]: On master: Close
+[0m16:30:45.767092 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:30:45.767222 [debug] [MainThread]: Connection 'model.llm_audit_dbt.my_second_dbt_model' was properly closed.
+[0m16:30:45.767369 [info ] [MainThread]: 
+[0m16:30:45.767515 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.14 seconds (0.14s).
+[0m16:30:45.767865 [debug] [MainThread]: Command end result
+[0m16:30:45.782017 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/manifest.json
+[0m16:30:45.782968 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/semantic_manifest.json
+[0m16:30:45.785882 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/run_results.json
+[0m16:30:45.786097 [info ] [MainThread]: 
+[0m16:30:45.786294 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:30:45.786513 [info ] [MainThread]: 
+[0m16:30:45.786702 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m16:30:45.789407 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.1676539, "process_in_blocks": "0", "process_kernel_time": 0.249617, "process_mem_max_rss": "158842880", "process_out_blocks": "0", "process_user_time": 1.659371}
+[0m16:30:45.789794 [debug] [MainThread]: Command `dbt run` succeeded at 16:30:45.789725 after 1.17 seconds
+[0m16:30:45.790027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1145d6050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114162ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112e59b00>]}
+[0m16:30:45.790233 [debug] [MainThread]: Flushing usage events
+[0m16:30:46.142917 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:32:09.039939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107450980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110987c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110987b10>]}
+
+
+============================== 16:32:09.043703 | 97b992c8-6b00-4d06-bc22-ee7f8105b8a2 ==============================
+[0m16:32:09.043703 [info ] [MainThread]: Running with dbt=1.11.8
+[0m16:32:09.044180 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'quiet': 'False', 'printer_width': '80', 'partial_parse': 'True', 'use_colors': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'warn_error': 'None', 'log_format': 'default', 'log_path': '/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/logs', 'log_cache_events': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'invocation_command': 'dbt run --select stg_audit_logs --profiles-dir .', 'debug': 'False', 'write_json': 'True', 'static_parser': 'True', 'no_print': 'None'}
+[0m16:32:09.233332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '97b992c8-6b00-4d06-bc22-ee7f8105b8a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078c8fc0>]}
+[0m16:32:09.263739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '97b992c8-6b00-4d06-bc22-ee7f8105b8a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110aa1d00>]}
+[0m16:32:09.265347 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:32:09.327609 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m16:32:09.375205 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:32:09.375540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '97b992c8-6b00-4d06-bc22-ee7f8105b8a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110ae6150>]}
+[0m16:32:09.991421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '97b992c8-6b00-4d06-bc22-ee7f8105b8a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111892a80>]}
+[0m16:32:10.030686 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/manifest.json
+[0m16:32:10.032155 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/semantic_manifest.json
+[0m16:32:10.039122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '97b992c8-6b00-4d06-bc22-ee7f8105b8a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111c78d70>]}
+[0m16:32:10.039377 [info ] [MainThread]: Found 3 models, 4 data tests, 475 macros
+[0m16:32:10.039550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '97b992c8-6b00-4d06-bc22-ee7f8105b8a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11186fad0>]}
+[0m16:32:10.040331 [info ] [MainThread]: 
+[0m16:32:10.040494 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:32:10.040621 [info ] [MainThread]: 
+[0m16:32:10.040849 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:32:10.041267 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_audit_db'
+[0m16:32:10.073393 [debug] [ThreadPool]: Using duckdb connection "list_audit_db"
+[0m16:32:10.073637 [debug] [ThreadPool]: On list_audit_db: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_audit_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"audit_db"'
+    
+  
+  
+[0m16:32:10.073848 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:32:10.080871 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+[0m16:32:10.081119 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_audit_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"audit_db"'
+    
+  
+  
+[0m16:32:10.081260 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:32:10.081392 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:32:10.084603 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+[0m16:32:10.084809 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m16:32:10.084941 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:32:10.085061 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:32:10.088112 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:32:10.088316 [debug] [MainThread]: Connection 'list_audit_db' was properly closed.
+[0m16:32:10.088471 [info ] [MainThread]: 
+[0m16:32:10.088667 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.05 seconds (0.05s).
+[0m16:32:10.088932 [error] [MainThread]: Encountered an error:
+IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+[0m16:32:10.097528 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 95, in exception_handler
+    yield
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/sql/connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 95, in exception_handler
+    yield
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/impl.py", line 1320, in execute_macro
+    result = macro_function(**kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 20, in macro
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/clients/jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 50, in macro
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/clients/jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/clients/jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/impl.py", line 471, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 130, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/sql/connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/sql/connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 102, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/main.py", line 593, in run
+    results = task.run()
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/runnable.py", line 626, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/runnable.py", line 559, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/run.py", line 1114, in before_run
+    self.create_schemas(adapter, required_schemas)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/runnable.py", line 734, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/utils/executor.py", line 16, in connected
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/runnable.py", line 709, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/sql/impl.py", line 218, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/impl.py", line 1319, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 102, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+
+[0m16:32:10.100589 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.1059754, "process_in_blocks": "0", "process_kernel_time": 0.267865, "process_mem_max_rss": "154124288", "process_out_blocks": "0", "process_user_time": 1.630199}
+[0m16:32:10.100860 [debug] [MainThread]: Command `dbt run` failed at 16:32:10.100813 after 1.11 seconds
+[0m16:32:10.101056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110886450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119eb750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119eb330>]}
+[0m16:32:10.101231 [debug] [MainThread]: Flushing usage events
+[0m16:32:10.569273 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:33:53.777628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105508980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107487c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107487b10>]}
+
+
+============================== 16:33:53.780693 | 4b1e0281-9c3c-4708-9bc3-3a84bf72b6c6 ==============================
+[0m16:33:53.780693 [info ] [MainThread]: Running with dbt=1.11.8
+[0m16:33:53.781038 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'write_json': 'True', 'introspect': 'True', 'version_check': 'True', 'target_path': 'None', 'log_format': 'default', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'debug': 'False', 'no_print': 'None', 'empty': 'False', 'profiles_dir': '.', 'log_path': '/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/logs', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'quiet': 'False', 'invocation_command': 'dbt run --select stg_audit_logs --profiles-dir .', 'use_colors': 'True', 'partial_parse': 'True'}
+[0m16:33:53.962239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b1e0281-9c3c-4708-9bc3-3a84bf72b6c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105bc8fc0>]}
+[0m16:33:53.990962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b1e0281-9c3c-4708-9bc3-3a84bf72b6c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075a1d00>]}
+[0m16:33:53.992434 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:33:54.053130 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m16:33:54.127122 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:33:54.127372 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:33:54.127505 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:33:54.145973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b1e0281-9c3c-4708-9bc3-3a84bf72b6c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cd8850>]}
+[0m16:33:54.221810 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/manifest.json
+[0m16:33:54.223170 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/semantic_manifest.json
+[0m16:33:54.230080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b1e0281-9c3c-4708-9bc3-3a84bf72b6c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10732da90>]}
+[0m16:33:54.230329 [info ] [MainThread]: Found 3 models, 4 data tests, 475 macros
+[0m16:33:54.230496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b1e0281-9c3c-4708-9bc3-3a84bf72b6c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d4b5b0>]}
+[0m16:33:54.231273 [info ] [MainThread]: 
+[0m16:33:54.231424 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:33:54.231550 [info ] [MainThread]: 
+[0m16:33:54.231784 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:33:54.232174 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_audit_db'
+[0m16:33:54.263403 [debug] [ThreadPool]: Using duckdb connection "list_audit_db"
+[0m16:33:54.263653 [debug] [ThreadPool]: On list_audit_db: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_audit_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"audit_db"'
+    
+  
+  
+[0m16:33:54.263791 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:33:54.270737 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+[0m16:33:54.270992 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_audit_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"audit_db"'
+    
+  
+  
+[0m16:33:54.271144 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:33:54.271280 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:33:54.274362 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+[0m16:33:54.274557 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m16:33:54.274689 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:33:54.274806 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:33:54.277919 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:33:54.278127 [debug] [MainThread]: Connection 'list_audit_db' was properly closed.
+[0m16:33:54.278283 [info ] [MainThread]: 
+[0m16:33:54.278444 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.05 seconds (0.05s).
+[0m16:33:54.278676 [error] [MainThread]: Encountered an error:
+IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+[0m16:33:54.287586 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 95, in exception_handler
+    yield
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/sql/connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 95, in exception_handler
+    yield
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/impl.py", line 1320, in execute_macro
+    result = macro_function(**kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 20, in macro
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/clients/jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 50, in macro
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/clients/jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/clients/jinja.py", line 82, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/clients/jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/jinja2/runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/impl.py", line 471, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 130, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/sql/connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/sql/connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 102, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/cli/main.py", line 593, in run
+    results = task.run()
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/runnable.py", line 626, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/runnable.py", line 559, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/run.py", line 1114, in before_run
+    self.create_schemas(adapter, required_schemas)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/runnable.py", line 734, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt_common/utils/executor.py", line 16, in connected
+    return func(*args, **kwargs)
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/task/runnable.py", line 709, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/sql/impl.py", line 218, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/impl.py", line 1319, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 102, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/base/connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/connections.py", line 53, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/local.py", line 75, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/.venv/lib/python3.13/site-packages/dbt/adapters/duckdb/environments/__init__.py", line 159, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "/Users/kis/llm_audit_project/audit_db.duckdb": No such file or directory
+
+[0m16:33:54.291598 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.5528066, "process_in_blocks": "0", "process_kernel_time": 0.221574, "process_mem_max_rss": "145211392", "process_out_blocks": "0", "process_user_time": 1.015588}
+[0m16:33:54.291888 [debug] [MainThread]: Command `dbt run` failed at 16:33:54.291838 after 0.55 seconds
+[0m16:33:54.292094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a2b5f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107386390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dbf350>]}
+[0m16:33:54.292276 [debug] [MainThread]: Flushing usage events
+[0m16:33:54.683518 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:34:47.432142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106608980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111587c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111587b10>]}
+
+
+============================== 16:34:47.435503 | a5a9bd03-5fc6-478e-9b5c-91be3ca7decb ==============================
+[0m16:34:47.435503 [info ] [MainThread]: Running with dbt=1.11.8
+[0m16:34:47.435903 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/logs', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'debug': 'False', 'log_cache_events': 'False', 'use_colors': 'True', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'use_experimental_parser': 'False', 'profiles_dir': '.', 'printer_width': '80', 'write_json': 'True', 'target_path': 'None', 'static_parser': 'True', 'invocation_command': 'dbt run --select stg_audit_logs --profiles-dir .', 'empty': 'False', 'introspect': 'True'}
+[0m16:34:47.618550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a5a9bd03-5fc6-478e-9b5c-91be3ca7decb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bc4fc0>]}
+[0m16:34:47.648355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a5a9bd03-5fc6-478e-9b5c-91be3ca7decb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1116a1d00>]}
+[0m16:34:47.649829 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:34:47.709007 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m16:34:47.755938 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:34:47.756251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a5a9bd03-5fc6-478e-9b5c-91be3ca7decb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1116e2150>]}
+[0m16:34:48.370337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a5a9bd03-5fc6-478e-9b5c-91be3ca7decb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ecea80>]}
+[0m16:34:48.408293 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/manifest.json
+[0m16:34:48.409719 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/semantic_manifest.json
+[0m16:34:48.417102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a5a9bd03-5fc6-478e-9b5c-91be3ca7decb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11217cd70>]}
+[0m16:34:48.417382 [info ] [MainThread]: Found 3 models, 4 data tests, 475 macros
+[0m16:34:48.417553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a5a9bd03-5fc6-478e-9b5c-91be3ca7decb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111e73ad0>]}
+[0m16:34:48.418337 [info ] [MainThread]: 
+[0m16:34:48.418501 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:34:48.418658 [info ] [MainThread]: 
+[0m16:34:48.418915 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:34:48.419383 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_audit_db'
+[0m16:34:48.450352 [debug] [ThreadPool]: Using duckdb connection "list_audit_db"
+[0m16:34:48.450621 [debug] [ThreadPool]: On list_audit_db: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_audit_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"audit_db"'
+    
+  
+  
+[0m16:34:48.450761 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:34:49.750611 [debug] [ThreadPool]: SQL status: OK in 1.300 seconds
+[0m16:34:49.751716 [debug] [ThreadPool]: On list_audit_db: Close
+[0m16:34:49.752115 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_audit_db, now create_audit_db_main)
+[0m16:34:49.752373 [debug] [ThreadPool]: Creating schema "database: "audit_db"
+schema: "main"
+"
+[0m16:34:49.755620 [debug] [ThreadPool]: Using duckdb connection "create_audit_db_main"
+[0m16:34:49.755793 [debug] [ThreadPool]: On create_audit_db_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "create_audit_db_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='audit_db'
+        and type='sqlite'
+    
+  
+[0m16:34:49.755935 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:34:49.756745 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:34:49.757472 [debug] [ThreadPool]: Using duckdb connection "create_audit_db_main"
+[0m16:34:49.757640 [debug] [ThreadPool]: On create_audit_db_main: BEGIN
+[0m16:34:49.757883 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:34:49.758016 [debug] [ThreadPool]: Using duckdb connection "create_audit_db_main"
+[0m16:34:49.758140 [debug] [ThreadPool]: On create_audit_db_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "create_audit_db_main"} */
+
+    
+    
+        create schema if not exists "audit_db"."main"
+    
+[0m16:34:49.758410 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:34:49.758824 [debug] [ThreadPool]: On create_audit_db_main: COMMIT
+[0m16:34:49.758968 [debug] [ThreadPool]: Using duckdb connection "create_audit_db_main"
+[0m16:34:49.759091 [debug] [ThreadPool]: On create_audit_db_main: COMMIT
+[0m16:34:49.759307 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:34:49.759440 [debug] [ThreadPool]: On create_audit_db_main: Close
+[0m16:34:49.762091 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_audit_db_main, now list_audit_db_main)
+[0m16:34:49.765438 [debug] [ThreadPool]: Using duckdb connection "list_audit_db_main"
+[0m16:34:49.765663 [debug] [ThreadPool]: On list_audit_db_main: BEGIN
+[0m16:34:49.765792 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:34:49.766171 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:34:49.766290 [debug] [ThreadPool]: Using duckdb connection "list_audit_db_main"
+[0m16:34:49.766411 [debug] [ThreadPool]: On list_audit_db_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_audit_db_main"} */
+select
+      'audit_db' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'audit_db'
+  
+[0m16:34:49.769022 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:34:49.769920 [debug] [ThreadPool]: On list_audit_db_main: ROLLBACK
+[0m16:34:49.770965 [debug] [ThreadPool]: Failed to rollback 'list_audit_db_main'
+[0m16:34:49.771197 [debug] [ThreadPool]: On list_audit_db_main: Close
+[0m16:34:49.771527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a5a9bd03-5fc6-478e-9b5c-91be3ca7decb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1126f44d0>]}
+[0m16:34:49.771771 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:34:49.771898 [debug] [MainThread]: On master: BEGIN
+[0m16:34:49.772019 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:34:49.772309 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:34:49.772435 [debug] [MainThread]: On master: COMMIT
+[0m16:34:49.772552 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:34:49.772664 [debug] [MainThread]: On master: COMMIT
+[0m16:34:49.772838 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:34:49.772958 [debug] [MainThread]: On master: Close
+[0m16:34:49.774303 [debug] [Thread-1 (]: Began running node model.llm_audit_dbt.stg_audit_logs
+[0m16:34:49.774590 [info ] [Thread-1 (]: 1 of 1 START sql view model main.stg_audit_logs ................................ [RUN]
+[0m16:34:49.774808 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_audit_db_main, now model.llm_audit_dbt.stg_audit_logs)
+[0m16:34:49.774990 [debug] [Thread-1 (]: Began compiling node model.llm_audit_dbt.stg_audit_logs
+[0m16:34:49.778505 [debug] [Thread-1 (]: Writing injected SQL for node "model.llm_audit_dbt.stg_audit_logs"
+[0m16:34:49.779015 [debug] [Thread-1 (]: Began executing node model.llm_audit_dbt.stg_audit_logs
+[0m16:34:49.795943 [debug] [Thread-1 (]: Writing runtime sql for node "model.llm_audit_dbt.stg_audit_logs"
+[0m16:34:49.796592 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.stg_audit_logs"
+[0m16:34:49.796776 [debug] [Thread-1 (]: On model.llm_audit_dbt.stg_audit_logs: BEGIN
+[0m16:34:49.796932 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:34:49.797334 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:34:49.797483 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.stg_audit_logs"
+[0m16:34:49.797637 [debug] [Thread-1 (]: On model.llm_audit_dbt.stg_audit_logs: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.stg_audit_logs"} */
+
+  
+  create view "audit_db"."main"."stg_audit_logs__dbt_tmp" as (
+    with raw_data as (
+   
+    select * from read_csv_auto('../raw_audit_logs.csv')
+),
+
+renamed as (
+    select
+        Prompt_ID as prompt_id,
+        Category as category,
+        Original_Prompt as original_prompt,
+        Model_Response as model_response,
+        Latency_Seconds as latency_seconds,
+        Status as status
+    from raw_data
+)
+
+select * from renamed
+  );
+
+[0m16:34:49.802956 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m16:34:49.806586 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.stg_audit_logs"
+[0m16:34:49.806846 [debug] [Thread-1 (]: On model.llm_audit_dbt.stg_audit_logs: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.stg_audit_logs"} */
+alter view "audit_db"."main"."stg_audit_logs__dbt_tmp" rename to "stg_audit_logs"
+[0m16:34:49.807528 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:34:49.813803 [debug] [Thread-1 (]: On model.llm_audit_dbt.stg_audit_logs: COMMIT
+[0m16:34:49.814012 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.stg_audit_logs"
+[0m16:34:49.814166 [debug] [Thread-1 (]: On model.llm_audit_dbt.stg_audit_logs: COMMIT
+[0m16:34:49.814860 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:34:49.817597 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.stg_audit_logs"
+[0m16:34:49.817798 [debug] [Thread-1 (]: On model.llm_audit_dbt.stg_audit_logs: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.stg_audit_logs"} */
+
+      drop view if exists "audit_db"."main"."stg_audit_logs__dbt_backup" cascade
+    
+[0m16:34:49.818391 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:34:49.819819 [debug] [Thread-1 (]: On model.llm_audit_dbt.stg_audit_logs: Close
+[0m16:34:49.820886 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5a9bd03-5fc6-478e-9b5c-91be3ca7decb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111eebcd0>]}
+[0m16:34:49.821225 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.stg_audit_logs ........................... [[32mOK[0m in 0.05s]
+[0m16:34:49.821502 [debug] [Thread-1 (]: Finished running node model.llm_audit_dbt.stg_audit_logs
+[0m16:34:49.822089 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:34:49.822233 [debug] [MainThread]: On master: BEGIN
+[0m16:34:49.822352 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:34:49.822619 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:34:49.822744 [debug] [MainThread]: On master: COMMIT
+[0m16:34:49.822865 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:34:49.822973 [debug] [MainThread]: On master: COMMIT
+[0m16:34:49.823155 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:34:49.823271 [debug] [MainThread]: On master: Close
+[0m16:34:49.823434 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:34:49.823544 [debug] [MainThread]: Connection 'model.llm_audit_dbt.stg_audit_logs' was properly closed.
+[0m16:34:49.823668 [info ] [MainThread]: 
+[0m16:34:49.823798 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 1.40 seconds (1.40s).
+[0m16:34:49.824110 [debug] [MainThread]: Command end result
+[0m16:34:49.839278 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/manifest.json
+[0m16:34:49.840259 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/semantic_manifest.json
+[0m16:34:49.843723 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/run_results.json
+[0m16:34:49.843947 [info ] [MainThread]: 
+[0m16:34:49.844144 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:34:49.844281 [info ] [MainThread]: 
+[0m16:34:49.844433 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:34:49.846393 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.4579325, "process_in_blocks": "0", "process_kernel_time": 0.299967, "process_mem_max_rss": "231866368", "process_out_blocks": "0", "process_user_time": 1.914729}
+[0m16:34:49.846626 [debug] [MainThread]: Command `dbt run` succeeded at 16:34:49.846585 after 2.46 seconds
+[0m16:34:49.846815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112701e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1126a5520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1122fbd50>]}
+[0m16:34:49.846988 [debug] [MainThread]: Flushing usage events
+[0m16:34:50.197380 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:36:10.699141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106650980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b87c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b87b10>]}
+
+
+============================== 16:36:10.702561 | 11a3a88d-e041-4128-82cd-109ffda1dd19 ==============================
+[0m16:36:10.702561 [info ] [MainThread]: Running with dbt=1.11.8
+[0m16:36:10.702915 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'profiles_dir': '.', 'no_print': 'None', 'invocation_command': 'dbt run --select int_sankey_densified --profiles-dir .', 'cache_selected_only': 'False', 'introspect': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'write_json': 'True', 'indirect_selection': 'eager', 'empty': 'False', 'log_format': 'default', 'quiet': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/logs', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False'}
+[0m16:36:10.892739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '11a3a88d-e041-4128-82cd-109ffda1dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1069c4fc0>]}
+[0m16:36:10.922981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '11a3a88d-e041-4128-82cd-109ffda1dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ca1d00>]}
+[0m16:36:10.924590 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:36:10.986007 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m16:36:11.061977 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m16:36:11.062350 [debug] [MainThread]: Partial parsing: added file: llm_audit_dbt://models/example/int_sankey_densified.sql
+[0m16:36:11.229052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '11a3a88d-e041-4128-82cd-109ffda1dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118bdd250>]}
+[0m16:36:11.268516 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/manifest.json
+[0m16:36:11.270018 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/semantic_manifest.json
+[0m16:36:11.276861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '11a3a88d-e041-4128-82cd-109ffda1dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1189c65d0>]}
+[0m16:36:11.277127 [info ] [MainThread]: Found 4 models, 4 data tests, 475 macros
+[0m16:36:11.277302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '11a3a88d-e041-4128-82cd-109ffda1dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107f0a0b0>]}
+[0m16:36:11.278087 [info ] [MainThread]: 
+[0m16:36:11.278264 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:36:11.278393 [info ] [MainThread]: 
+[0m16:36:11.278631 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:36:11.279024 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_audit_db'
+[0m16:36:11.309078 [debug] [ThreadPool]: Using duckdb connection "list_audit_db"
+[0m16:36:11.309343 [debug] [ThreadPool]: On list_audit_db: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_audit_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"audit_db"'
+    
+  
+  
+[0m16:36:11.309490 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:36:11.347606 [debug] [ThreadPool]: SQL status: OK in 0.038 seconds
+[0m16:36:11.348716 [debug] [ThreadPool]: On list_audit_db: Close
+[0m16:36:11.349104 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_audit_db, now create_audit_db_main)
+[0m16:36:11.349353 [debug] [ThreadPool]: Creating schema "database: "audit_db"
+schema: "main"
+"
+[0m16:36:11.352638 [debug] [ThreadPool]: Using duckdb connection "create_audit_db_main"
+[0m16:36:11.352808 [debug] [ThreadPool]: On create_audit_db_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "create_audit_db_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='audit_db'
+        and type='sqlite'
+    
+  
+[0m16:36:11.352939 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:36:11.353659 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:36:11.354276 [debug] [ThreadPool]: Using duckdb connection "create_audit_db_main"
+[0m16:36:11.354409 [debug] [ThreadPool]: On create_audit_db_main: BEGIN
+[0m16:36:11.354624 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:36:11.354781 [debug] [ThreadPool]: Using duckdb connection "create_audit_db_main"
+[0m16:36:11.354914 [debug] [ThreadPool]: On create_audit_db_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "create_audit_db_main"} */
+
+    
+    
+        create schema if not exists "audit_db"."main"
+    
+[0m16:36:11.355168 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:36:11.355598 [debug] [ThreadPool]: On create_audit_db_main: COMMIT
+[0m16:36:11.355743 [debug] [ThreadPool]: Using duckdb connection "create_audit_db_main"
+[0m16:36:11.355866 [debug] [ThreadPool]: On create_audit_db_main: COMMIT
+[0m16:36:11.356068 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:36:11.356196 [debug] [ThreadPool]: On create_audit_db_main: Close
+[0m16:36:11.358659 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_audit_db_main, now list_audit_db_main)
+[0m16:36:11.362676 [debug] [ThreadPool]: Using duckdb connection "list_audit_db_main"
+[0m16:36:11.362855 [debug] [ThreadPool]: On list_audit_db_main: BEGIN
+[0m16:36:11.362978 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:36:11.363251 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:36:11.363375 [debug] [ThreadPool]: Using duckdb connection "list_audit_db_main"
+[0m16:36:11.363502 [debug] [ThreadPool]: On list_audit_db_main: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "connection_name": "list_audit_db_main"} */
+select
+      'audit_db' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'audit_db'
+  
+[0m16:36:11.366082 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:36:11.366911 [debug] [ThreadPool]: On list_audit_db_main: ROLLBACK
+[0m16:36:11.367729 [debug] [ThreadPool]: Failed to rollback 'list_audit_db_main'
+[0m16:36:11.367870 [debug] [ThreadPool]: On list_audit_db_main: Close
+[0m16:36:11.368245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '11a3a88d-e041-4128-82cd-109ffda1dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119041a50>]}
+[0m16:36:11.368448 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:36:11.368570 [debug] [MainThread]: On master: BEGIN
+[0m16:36:11.368688 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:36:11.368940 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:36:11.369061 [debug] [MainThread]: On master: COMMIT
+[0m16:36:11.369175 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:36:11.369283 [debug] [MainThread]: On master: COMMIT
+[0m16:36:11.369462 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:36:11.369582 [debug] [MainThread]: On master: Close
+[0m16:36:11.370793 [debug] [Thread-1 (]: Began running node model.llm_audit_dbt.int_sankey_densified
+[0m16:36:11.371056 [info ] [Thread-1 (]: 1 of 1 START sql view model main.int_sankey_densified .......................... [RUN]
+[0m16:36:11.371275 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_audit_db_main, now model.llm_audit_dbt.int_sankey_densified)
+[0m16:36:11.371444 [debug] [Thread-1 (]: Began compiling node model.llm_audit_dbt.int_sankey_densified
+[0m16:36:11.375066 [debug] [Thread-1 (]: Writing injected SQL for node "model.llm_audit_dbt.int_sankey_densified"
+[0m16:36:11.375534 [debug] [Thread-1 (]: Began executing node model.llm_audit_dbt.int_sankey_densified
+[0m16:36:11.390111 [debug] [Thread-1 (]: Writing runtime sql for node "model.llm_audit_dbt.int_sankey_densified"
+[0m16:36:11.391030 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.int_sankey_densified"
+[0m16:36:11.391337 [debug] [Thread-1 (]: On model.llm_audit_dbt.int_sankey_densified: BEGIN
+[0m16:36:11.391517 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:36:11.391930 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:36:11.392079 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.int_sankey_densified"
+[0m16:36:11.392241 [debug] [Thread-1 (]: On model.llm_audit_dbt.int_sankey_densified: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.int_sankey_densified"} */
+
+  
+  create view "audit_db"."main"."int_sankey_densified__dbt_tmp" as (
+    -- models/int_sankey_densified.sql
+
+with source_logs as (
+   
+    select * from "audit_db"."main"."stg_audit_logs"
+),
+
+
+path_generator as (
+    select * from generate_series(1, 49) as t(path_index)
+),
+
+
+densified_logs as (
+    select
+        s.prompt_id,
+        s.category,
+        s.status,
+        s.latency_seconds,
+        p.path_index
+    from source_logs s
+    cross join path_generator p
+)
+
+select * from densified_logs
+  );
+
+[0m16:36:11.398472 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m16:36:11.402211 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.int_sankey_densified"
+[0m16:36:11.402473 [debug] [Thread-1 (]: On model.llm_audit_dbt.int_sankey_densified: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.int_sankey_densified"} */
+alter view "audit_db"."main"."int_sankey_densified__dbt_tmp" rename to "int_sankey_densified"
+[0m16:36:11.403241 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:36:11.410181 [debug] [Thread-1 (]: On model.llm_audit_dbt.int_sankey_densified: COMMIT
+[0m16:36:11.410391 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.int_sankey_densified"
+[0m16:36:11.410540 [debug] [Thread-1 (]: On model.llm_audit_dbt.int_sankey_densified: COMMIT
+[0m16:36:11.411520 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:36:11.414379 [debug] [Thread-1 (]: Using duckdb connection "model.llm_audit_dbt.int_sankey_densified"
+[0m16:36:11.414603 [debug] [Thread-1 (]: On model.llm_audit_dbt.int_sankey_densified: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "llm_audit_dbt", "target_name": "dev", "node_id": "model.llm_audit_dbt.int_sankey_densified"} */
+
+      drop view if exists "audit_db"."main"."int_sankey_densified__dbt_backup" cascade
+    
+[0m16:36:11.415218 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m16:36:11.416553 [debug] [Thread-1 (]: On model.llm_audit_dbt.int_sankey_densified: Close
+[0m16:36:11.417572 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '11a3a88d-e041-4128-82cd-109ffda1dd19', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1191d8290>]}
+[0m16:36:11.417903 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.int_sankey_densified ..................... [[32mOK[0m in 0.05s]
+[0m16:36:11.418181 [debug] [Thread-1 (]: Finished running node model.llm_audit_dbt.int_sankey_densified
+[0m16:36:11.418796 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:36:11.418978 [debug] [MainThread]: On master: BEGIN
+[0m16:36:11.419116 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:36:11.419426 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:36:11.419572 [debug] [MainThread]: On master: COMMIT
+[0m16:36:11.419697 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:36:11.419817 [debug] [MainThread]: On master: COMMIT
+[0m16:36:11.420000 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:36:11.420119 [debug] [MainThread]: On master: Close
+[0m16:36:11.420287 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:36:11.420401 [debug] [MainThread]: Connection 'model.llm_audit_dbt.int_sankey_densified' was properly closed.
+[0m16:36:11.420527 [info ] [MainThread]: 
+[0m16:36:11.420658 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.14 seconds (0.14s).
+[0m16:36:11.420952 [debug] [MainThread]: Command end result
+[0m16:36:11.436193 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/manifest.json
+[0m16:36:11.437271 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/semantic_manifest.json
+[0m16:36:11.440075 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/kis/Documents/Chenge Li/Profile/The prompt EG/llm_audit_project/llm_audit_dbt/target/run_results.json
+[0m16:36:11.440238 [info ] [MainThread]: 
+[0m16:36:11.440425 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:36:11.440561 [info ] [MainThread]: 
+[0m16:36:11.440706 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:36:11.442929 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.7847937, "process_in_blocks": "0", "process_kernel_time": 0.280505, "process_mem_max_rss": "161742848", "process_out_blocks": "0", "process_user_time": 1.30185}
+[0m16:36:11.443348 [debug] [MainThread]: Command `dbt run` succeeded at 16:36:11.443263 after 0.79 seconds
+[0m16:36:11.443592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11902d180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1190c7bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1190c7f70>]}
+[0m16:36:11.443780 [debug] [MainThread]: Flushing usage events
+[0m16:36:11.969228 [debug] [MainThread]: An error was encountered while trying to flush usage events
