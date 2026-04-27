@@ -27,4 +27,4 @@ An end-to-end automated LLM (Large Language Model) auditing project, covering th
 ## 🚀 Getting Started
 1. **Data Collection**: Run `python scripts/batch_audit.py` to fetch LLM responses.
 2. **Transform**: Execute `dbt run` within the `/llm_audit_dbt` directory to process logs and perform data densification.
-3. **Visualize**: Import the generated `tableau_ready_sankey.csv` into Tableau and map the predefined `T` and `Curve` coordinates.
+3. **Visualize**: Import the generated `tableau_ready_sankey.csv` into Tableau and map the predefined `T` and `Curve` coordinates
